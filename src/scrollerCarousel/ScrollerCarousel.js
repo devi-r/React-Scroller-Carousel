@@ -2,19 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import "./ScrollerCarousel.scss";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import PropTypes from "prop-types";
-
-const actions = {
-  NEXT: "NEXT",
-  PREV: "PREV",
-};
-
-export const ControlButton = (props) => {
-  return (
-    <div className={`control-button ${props?.addClass}`} onClick={props?.cta}>
-      {props?.children}
-    </div>
-  );
-};
+import { actions } from "./constants";
+import { ControlButton } from "./components";
 
 const ScrollerCarousel = ({
   cards,
@@ -115,17 +104,17 @@ const ScrollerCarousel = ({
       {cardsCount > 1 && controlButtons && (
         <>
           <ControlButton
-            cta={() => {
+            onClick={() => {
               handleControlButtonScroll(PREV);
             }}
-            addClass={`prev ${scrollerState?.start ? "disabled" : ""}`}
+            className={`prev ${scrollerState?.start ? "disabled" : ""}`}
             children={<FaChevronLeft />}
           />
           <ControlButton
-            cta={() => {
+            onClick={() => {
               handleControlButtonScroll(NEXT);
             }}
-            addClass={`next ${scrollerState?.end ? "disabled" : ""}`}
+            className={`next ${scrollerState?.end ? "disabled" : ""}`}
             children={<FaChevronRight />}
           />
         </>
