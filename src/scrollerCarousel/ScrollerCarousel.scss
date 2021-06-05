@@ -1,0 +1,60 @@
+.scroller-carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  ul.scroller-wrapper {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    overflow: auto hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    li.Slide {
+      list-style-type: none;
+      border: none;
+      outline: none;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+  .Card {
+    width: 100%;
+    height: 100%;
+  }
+
+  .control-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background-color: #00000080;
+    color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    &.prev {
+      left: 0;
+      margin: auto auto auto 0;
+    }
+    &.next {
+      right: 0;
+      margin: auto 0 auto auto;
+    }
+    &.disabled {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+}
