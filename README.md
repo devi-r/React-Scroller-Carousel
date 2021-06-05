@@ -3,6 +3,7 @@
 Basic Scroller Carousel with demo usage.
 
 Demo:
+
 ![scroller-carousel](https://github.com/devi-r/React-Scroller-Carousel/blob/main/src/demo/scroller-carousel.gif)
 
 ## Getting Started
