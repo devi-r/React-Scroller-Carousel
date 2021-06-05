@@ -1,5 +1,5 @@
 import "./App.scss";
-import ScrollerCarousel from "./scrollerCarousel/ScrollerCarousel";
+import ScrollerCarousel from "../scrollerCarousel/ScrollerCarousel";
 
 const Card = ({ cardData: imgSrc }) => {
   return (
@@ -27,7 +27,7 @@ const App = () => {
         cards={cards}
         Card={Card}
         controlButtons={true}
-        scrollToIndex={3}
+        scrollToIndex={2}
       />
     </div>
   );

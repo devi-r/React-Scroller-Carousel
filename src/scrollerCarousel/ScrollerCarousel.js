@@ -41,7 +41,7 @@ const ScrollerCarousel = ({
     if (scrollerWrapperRef && scrollerWrapperRef?.current) {
       if (scrollToIndex >= 0) {
         const x = [...childNodes]
-          ?.slice(0, scrollToIndex - 1)
+          ?.slice(0, scrollToIndex)
           ?.reduce((acc, child) => {
             return (acc += child?.clientWidth);
           }, 0);
@@ -131,7 +131,7 @@ ScrollerCarousel.defaultProps = {
     distance: 500,
     step: 50,
   },
-  scrollToIndex: null,
+  scrollToIndex: null, //This will be first in view
 };
 ScrollerCarousel.propTypes = {
   cards: PropTypes.array.isRequired,
